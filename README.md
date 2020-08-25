@@ -1,7 +1,3 @@
-# shoppingcart
-
-> Simple shopping cart framework
-
 ## Build Setup
 
 ``` bash
@@ -15,4 +11,12 @@ npm run dev
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# description
+```
+Membuat halaman seperti ini dengan di tambahkan searchbox di atasnya.
+
+1. ketika di klik, seoalah2, akan menambah ke cart atau selected list box.
+2. untuk render price menggunakan filter,
+3. ketika button add di klik, makan muncul semacam alert , di bagain atas, di implemetasi , ex:   alert bootstrap
+
+```
