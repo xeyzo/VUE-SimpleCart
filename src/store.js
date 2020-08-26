@@ -5,13 +5,14 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
+        currentFilter: 'ALL',
         products: [
-            { id: 1, name: 'Sampel Sepatu', image: 'https://via.placeholder.com/150/92c952', price: 200000 },
-            { id: 2, name: 'Sampel Kaos', image: 'https://via.placeholder.com/150/771796', price: 50000 },
-            { id: 3, name: 'Sampel TV', image: 'https://via.placeholder.com/150/24f355', price: 2000000 },
-            { id: 4, name: 'Sampel Laptop', image: 'https://via.placeholder.com/150/d32776', price: 6000000 },
-            { id: 5, name: 'Sampel Jaket', image: 'https://via.placeholder.com/150/f66b97', price: 100000 },
-            { id: 6, name: 'Sampel Topi', image: 'https://via.placeholder.com/150/56a8c2', price: 30000 },
+            { id: 1, name: 'Sampel Sepatu', image: 'https://via.placeholder.com/150/92c952', price: 200000, category: 'Pakaian' },
+            { id: 2, name: 'Sampel Kaos', image: 'https://via.placeholder.com/150/771796', price: 50000, category: 'Pakaian' },
+            { id: 3, name: 'Sampel TV', image: 'https://via.placeholder.com/150/24f355', price: 2000000, category: 'Elektronik' },
+            { id: 4, name: 'Sampel Laptop', image: 'https://via.placeholder.com/150/d32776', price: 6000000, category: 'Elektronik' },
+            { id: 5, name: 'Sampel Jaket', image: 'https://via.placeholder.com/150/f66b97', price: 100000, category: 'Pakaian' },
+            { id: 6, name: 'Sampel Topi', image: 'https://via.placeholder.com/150/56a8c2', price: 30000, category: 'Accecoris' },
           ],
         inCart: []
     },
@@ -31,6 +32,9 @@ export default new Vuex.Store({
         },
         removeFromCart(context, index) {
             context.commit('REMOVE_FROM_CART', index);
-        }
+        },
+        filterFromIndex(context, category) {
+            context.commit('filterFromIndex', category);
+        },
     }
 })
